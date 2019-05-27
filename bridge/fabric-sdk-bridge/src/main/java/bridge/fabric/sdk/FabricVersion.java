@@ -4,10 +4,10 @@ import java.util.EnumSet;
 import java.util.Set;
 
 /**
- * @GitHub : https://github.com/zacscoding
+ * Fabric version
  */
 public enum FabricVersion {
-    V1_3, V1_4, UNKNOWN;
+    V1_0, V1_4, UNKNOWN;
 
     private static Set<FabricVersion> VERSION_SET = EnumSet.allOf(FabricVersion.class);
 

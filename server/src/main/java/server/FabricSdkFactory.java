@@ -2,7 +2,7 @@ package server;
 
 import bridge.fabric.sdk.FabricSDK;
 import bridge.fabric.sdk.FabricVersion;
-import bridge.fabric.sdk.impl.FabricSDK130;
+import bridge.fabric.sdk.impl.FabricSDK100;
 import bridge.fabric.sdk.impl.FabricSDK140;
 
 /**
@@ -16,8 +16,8 @@ public class FabricSdkFactory {
         }
 
         switch (version) {
-            case V1_3:
-                return new FabricSDK130();
+            case V1_0:
+                return new FabricSDK100();
             case V1_4:
                 return new FabricSDK140();
             default:

@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>fabric-sdk-1.4.0</artifactId>
+    <artifactId>fabric-sdk-14</artifactId>
     <dependencies>
         <dependency>
             <groupId>me.zaccoding</groupId>
@@ -22,7 +22,6 @@
             <groupId>org.hyperledger.fabric-sdk-java</groupId>
             <artifactId>fabric-sdk-java</artifactId>
             <version>1.4.0</version>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -52,7 +51,7 @@
                             <relocations>
                                 <relocation>
                                     <pattern>org.hyperledger</pattern>
-                                    <shadedPattern>four.org.hyperledger</shadedPattern>
+                                    <shadedPattern>one.four.org.hyperledger</shadedPattern>
                                 </relocation>
                             </relocations>
                             <createDependencyReducedPom>false</createDependencyReducedPom>

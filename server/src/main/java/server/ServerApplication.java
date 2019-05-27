@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * @GitHub : https://github.com/zacscoding
+ *
  */
 @Slf4j
 @RestController
@@ -33,12 +33,13 @@ public class ServerApplication {
         }
     }
 
-    @GetMapping("/client/{version}")
-    public ResponseEntity checkFabricClient(@PathVariable("version") String version) {
+    @GetMapping("/call/{version}")
+    public ResponseEntity callMethods(@PathVariable("version") String version) {
         try {
             FabricVersion fabricVersion = FabricVersion.getVersion(version);
             FabricSDK fabricSDK = FabricSdkFactory.newInstance(fabricVersion);
-            return ResponseEntity.ok(fabricSDK.getHFClientName());
+            logger.info("FabricSDK :: " + fabricSDK.getClass().getName());
+            return ResponseEntity.ok(fabricSDK.callDifferentMethods());
         } catch (UnsupportedOperationException e) {
             return ResponseEntity.badRequest().body("Invalid version : " + version);
         }
